@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>My Movies</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <div>
+        <div><input type="button" value="Add Movie" ng-click="vm.redirectToAddMovie()" /></div>
+        <table style="border:solid;" ng-repeat="movie in vm.movies | orderBy:'-releaseYear'">
+            <tr>
+                <td><h3>{{movie.name}}</h3></td>
+            </tr>
+            <tr>
+                <td>{{movie.description}}</td>
+                <!--<td>{{movie.averageRating}}</td>-->
+                <td><input type="button" value="Details" ng-click="vm.redirectToDetails(movie)" /></td>
+            </tr>
+            <tr>
+                <td star-rating rating-value='movie.averageRating' max="10"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

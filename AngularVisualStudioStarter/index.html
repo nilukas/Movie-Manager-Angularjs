@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title>Movie Management</title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body ng-controller="MovieController as vm">
+    <h2>My Movies</h2>
+    <!--<input type="text" ng-model="vm.food" placeholder="Enter food" />-->
+    <!--<p>Sriracha sauce is great with {{vm.food}}!</p>-->
+    <div data-ng-view id="ng-view"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers/movieController.js"></script>
+    <script src="app/directives/starRating.js"></script>
+</body>
+</html>

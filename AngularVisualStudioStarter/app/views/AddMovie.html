@@ -3,47 +3,67 @@
 <head>
     <title>Create Movie</title>
     <h2>Create Movie</h2>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
 </head>
-<body>
+<body ng-controller="MovieController">
     <div>
-        <label>Title</label>
-        <input type="text" />
-    </div>
-    <div>
-        <label>Description</label>
-        <input type="text" />
-    </div>
-    <div>
-        <label>Director</label>
-        <input type="text" />
-    </div>
-    <div>
-        <label>Release Year</label>
-        <input type="text" />
-    </div>
-    <div>
-        <label>Rating</label>
-        <input type="text" />
-    </div>
-    <div>
-        <label>Language</label>
-        <input type="text" />
-    </div>
-    <h3>characters</h3>
-    <div>
-        <label>Character</label>
-        <input type="text" />
-    </div>
-    <div>
-        <label>Actor</label>
-        <input type="text" />
-        <div>
-            <input type="button" value="Add" />
-        </div>
-    </div>
-    <div>
-        <input type="button" value="Save"/>
+        <form name="formAdd" ng-submit="saveMovie()">
+            <div>
+                <label>Title</label>
+                <input type="text" ng-model="title" required />
+            </div>
+            <div>
+                <label>Description</label>
+                <input type="text" ng-model="description" />
+            </div>
+            <div>
+                <label>Director</label>
+                <input type="text" ng-model="director" />
+            </div>
+            <div>
+                <label>Release Year</label>
+                <input type="number" min="1900" ng-model="releaseYear" />
+            </div>
+            <div>
+                <label>Rating</label>
+                <input type="number" min="1" max="10" ng-model="rating" required />
+            </div>
+            <div>
+                <label>Language</label>
+                <input type="text" ng-model="language" required />
+            </div>
+            <div>
+                <label>Country</label>
+                <input type="text" ng-model="country" required />
+            </div>
+            <div role="alert">
+                <span class="error" ng-show="formAdd.input.$error.required">
+                    Required!
+                </span>
+                <span class="error" ng-show="formAdd.input.$error.number">
+                    Not valid number!
+                </span>
+            </div>
+            <div>
+                <input type="submit" value="Save" ng-click="template='characterPage'" />
+            </div>
+            <ng-include src="template"></ng-include>
+            <script type="text/ng-template" id="characterPage">
+                <h3>Characters</h3>
+                <div>
+                    <label>Character</label>
+                    <input type="text" ng-model="character" />
+                </div>
+                <div>
+                    <label>Actor</label>
+                    <input type="text" ng-model="actor" />
+                    <div>
+                        <input type="button" value="Add" />
+                    </div>
+                </div>
+            </script>
+
+        </form>
     </div>
 </body>
 </html>

@@ -1,10 +1,27 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title></title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
 </head>
 <body>
+    <div ng-controller="MovieDetailController">
+        <p style="visibility:hidden">{{ sharedData.id }}</p>
+        <h2>
+            {{ sharedData.title }}
+        </h2>
+        <p>{{ sharedData.description }}</p>
+        <p>Directed By: {{ sharedData.director }}</p>
+        <p>Release Year: {{ sharedData.releaseYear }}</p>
+        <p>Language: {{ sharedData.language }}</p>
 
+        <h3>Characters</h3>
+
+        <table style="border:none;" ng-repeat="c in sharedData.characters | orderBy:'character'">
+            <tr>
+                <td>{{c.character}} ({{c.actor}})</td>
+            </tr>
+        </table>
+        <div star-rating rating-value='sharedData.rating' max="10"></div>
+    </div>
 </body>
 </html>

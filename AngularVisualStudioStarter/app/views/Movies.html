@@ -1,23 +1,23 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>My Movies</title>
     <meta charset="utf-8" />
 </head>
-<body>
+<body ng-controller="MovieController">
+    <h2>My Movies</h2>
     <div>
-        <div><input type="button" value="Add Movie" ng-click="vm.redirectToAddMovie()" /></div>
-        <table style="border:solid;" ng-repeat="movie in vm.movies | orderBy:'-releaseYear'">
+        <div><input type="button" value="Add Movie" ng-click="redirectToAddMovie()" /></div>
+        <table style="border:solid;border-bottom:solid" ng-repeat="movie in movies | orderBy:'-releaseYear'">
             <tr>
-                <td><h3>{{movie.name}}</h3></td>
+                <td><h3>{{movie.title}}</h3></td>
             </tr>
             <tr>
                 <td>{{movie.description}}</td>
-                <!--<td>{{movie.averageRating}}</td>-->
-                <td><input type="button" value="Details" ng-click="vm.redirectToDetails(movie)" /></td>
+                <!--<td>{{movie.rating}}</td>-->
+                <td><input type="button" value="Details" ng-click="redirectToDetails(movie)" /></td>
             </tr>
             <tr>
-                <td star-rating rating-value='movie.averageRating' max="10"></td>
+                <td star-rating rating-value='movie.rating' max="10"></td>
             </tr>
         </table>
     </div>

@@ -2,37 +2,45 @@
   "movies": [
     {
       "id": "BVwi1",
-      "title": "Bag It",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut laoreet tortor ligula, vitae tincidunt libero tincidunt et. Nunc egestas aliquet dolor, finibus laoreet ante ultricies a. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus id ipsum ac lorem rutrum vehicula id quis augue. Nullam dapibus magna velit, eget tempus diam aliquet non. Donec finibus purus dolor, vel euismod turpis maximus eu. Praesent faucibus libero nec leo placerat commodo. Morbi ut accumsan dui. Maecenas est risus, interdum non odio sed, consectetur auctor neque. Quisque ac pulvinar erat.",
-      "director": "John kenedy",
+      "title": "The Matrix",
+      "description": "Neo (Keanu Reeves) believes that Morpheus (Laurence Fishburne), an elusive figure considered to be the most dangerous man alive, can answer his question -- What is the Matrix? Neo is contacted by Trinity (Carrie-Anne Moss), a beautiful stranger who leads him into an underworld where he meets Morpheus. They fight a brutal battle for their lives against a cadre of viciously intelligent secret agents. It is a truth that could cost Neo something more precious than his life.",
+      "director": "Lilly Wachowski, Lana Wachowski",
       "rating": 3,
-      "releaseYear": 2010,
+      "releaseYear": 1999,
       "language": "English",
-      "country": "US",
+      "country": "USA",
       "characters": [
         {
-          "character": "sumana",
-          "actor": "Nadeeka"
+          "character": "Neo",
+          "actor": "Keanu Reeves"
+        },
+         {
+          "character": "Trinity",
+          "actor": "Carrie-Anne Moss"
+        },
+         {
+          "character": "Agent Smith",
+          "actor": "Hugo Weaving"
         }
       ]
     },
     {
       "id": "BW1Ss",
-      "title": "Lost Boy: The Next Chapter",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut laoreet tortor ligula, vitae tincidunt libero tincidunt et. Nunc egestas aliquet dolor, finibus laoreet ante ultricies a. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus id ipsum ac lorem rutrum vehicula id quis augue. Nullam dapibus magna velit, eget tempus diam aliquet non. Donec finibus purus dolor, vel euismod turpis maximus eu. Praesent faucibus libero nec leo placerat commodo. Morbi ut accumsan dui. Maecenas est risus, interdum non odio sed, consectetur auctor neque. Quisque ac pulvinar erat.",
-      "director": "John papa",
+      "title": "Breaveheart",
+      "description": "Tells the story of the legendary thirteenth century Scottish hero named William Wallace (Mel Gibson). Wallace rallies the Scottish against the English monarch and Edward I (Peter Hanly) after he suffers a personal tragedy by English soldiers. Wallace gathers a group of amateur warriors that is stronger than any English army.",
+      "director": "Mel Gibson",
       "rating": 4.6,
-      "releaseYear": 2012,
-      "language": "Russian",
-      "country": "Russia",
+      "releaseYear": 1995,
+      "language": "English",
+      "country": "USA",
       "characters": [
         {
-          "character": "wijaya",
-          "actor": "wijaya k"
+          "character": "Williiam Wallace",
+          "actor": "Mel Gibson"
         },
         {
-          "character": "sira",
-          "actor": "sirisena"
+          "character": "Queen Isabella",
+          "actor": "Sophie Marceau"
         }
       ]
     }

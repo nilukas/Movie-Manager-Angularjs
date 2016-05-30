@@ -9,7 +9,7 @@
         <div><input type="button" value="Add Movie" ng-click="redirectToAddMovie()" /></div>
         <table style="border:solid;border-bottom:solid;width:100%" ng-repeat="movie in movies | orderBy:'-releaseYear'">
             <tr>
-                <td><h3>{{movie.title}}</h3></td>
+                <td><h3>{{movie.title}} ({{movie.releaseYear}})</h3></td>
             </tr>
             <tr>
                 <td>{{movie.description}}</td>

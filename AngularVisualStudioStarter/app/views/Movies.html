@@ -7,14 +7,14 @@
     <h2>My Movies</h2>
     <div>
         <div><input type="button" value="Add Movie" ng-click="redirectToAddMovie()" /></div>
-        <table style="border:solid;border-bottom:solid" ng-repeat="movie in movies | orderBy:'-releaseYear'">
+        <table style="border:solid;border-bottom:solid;width:100%" ng-repeat="movie in movies | orderBy:'-releaseYear'">
             <tr>
                 <td><h3>{{movie.title}}</h3></td>
             </tr>
             <tr>
                 <td>{{movie.description}}</td>
                 <!--<td>{{movie.rating}}</td>-->
-                <td><input type="button" value="Details" ng-click="redirectToDetails(movie)" /></td>
+                <td align="right"><input type="button" value="Details" ng-click="redirectToDetails(movie)"/></td>
             </tr>
             <tr>
                 <td star-rating rating-value='movie.rating' max="10"></td>

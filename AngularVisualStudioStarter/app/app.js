@@ -1,4 +1,4 @@
-﻿var app = angular.module('app', ['ngRoute', 'ngAnimate']);
+﻿var app = angular.module('app', ['ngRoute', 'ngAnimate', 'toaster']);
 
 app.factory('MovieFactory', function ($http) {
     return {

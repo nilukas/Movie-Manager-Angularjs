@@ -1,4 +1,4 @@
-﻿app.controller('MovieController', function ($scope, $rootScope, srvShareData, MovieFactory, $location) {
+﻿app.controller('MovieController', function ($scope, $rootScope, srvShareData, MovieFactory, $location,toaster) {
     MovieFactory.get().then(function (data) {
         if ($rootScope.movies == null) {
             $rootScope.movies = data.data.movies;
@@ -40,6 +40,7 @@
             $scope.moviesAdded.forEach(function (movie) {
                 $rootScope.movies.push(movie);
             });
+            toaster.pop('success', "Save Movie", "Successfully saved the Movie");
             $location.path('/');
         }
          

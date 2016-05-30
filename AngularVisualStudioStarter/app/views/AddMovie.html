@@ -52,14 +52,30 @@
                 <h3>Characters</h3>
                 <div>
                     <label>Character</label>
-                    <input type="text" ng-model="character" />
+                    <input type="text" ng-model="$parent.character" />
                 </div>
                 <div>
                     <label>Actor</label>
-                    <input type="text" ng-model="actor" />
-                    <div>
-                        <input type="button" value="Add" />
-                    </div>
+                    <input type="text" ng-model="$parent.actor" />
+                </div>
+                <div>
+                    <input type="button" value="Add" ng-click="addCharacters()" />
+                </div>
+                <div>
+                    <table style="border:thin">
+                        <thead>
+                            <tr>
+                                <th>Character</th>
+                                <th>Actor</th>
+                            </tr>
+                        </thead>
+                        <tbody ng-repeat="c in charactersAdded | orderBy:'character'">
+                            <tr>
+                                <td>{{c.character}}</td>
+                                <td>{{c.actor}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </script>
 
